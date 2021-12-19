@@ -4,6 +4,9 @@ public class feestlunch {
     
     public static double kosten = aantalCroissantjes * prijsCroissantje + aantalStokbroodjes * prijsStokbroodje - aantalBonnen * korting;
     public static void main(String[] args){
-        System.out.println(kosten);
+        System.out.printf(
+            "De feestlunch kost je bij de bakker %.2f euro voor de %d croissantjes en de %d stokbroden als de %d kortingsbonnen nog geldig zijn!", 
+            kosten, aantalCroissantjes, aantalStokbroodjes, aantalBonnen
+            );
     }
 }
