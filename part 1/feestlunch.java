@@ -1,5 +1,4 @@
 import java.util.Scanner;
-@SuppressWarnings("resource")
 
 public class feestlunch {
     final public static double prijsCroissantje = 0.39, prijsStokbroodje = 2.78, korting = 0.5;
@@ -14,6 +13,8 @@ public class feestlunch {
 
         System.out.println("Hoeveel kortingsbonnen heeft u?");
         int aantalBonnen = userInput.nextInt();
+
+        userInput.close();
 
         double kosten = aantalCroissantjes * prijsCroissantje + aantalStokbroodjes * prijsStokbroodje - aantalBonnen * korting;
         System.out.printf(

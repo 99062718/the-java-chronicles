@@ -1,5 +1,4 @@
 import java.util.Scanner;
-@SuppressWarnings("resource")
 
 public class speelhal {
     final public static double entrancePrice = 7.45, VIPVRprice = 0.37;
@@ -12,6 +11,8 @@ public class speelhal {
 
         System.out.println("How many minutes will you each spend in the VIP Vr room?");
         int minInVIPVR = userAnswer.nextInt();
+
+        userAnswer.close();
 
         double totalPrice = amountPeople * entrancePrice + amountPeople * (minInVIPVR / 5 * VIPVRprice);
         System.out.printf(
